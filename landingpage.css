@@ -1,0 +1,186 @@
+/* Reset de CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2d2d2d; /* Cor de fundo escura */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Estilo do header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+#title {
+    flex-direction: column;
+}
+
+nav ul {
+    display: flex;
+}
+
+li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: rgb(132, 14, 201);
+}
+
+#inscreva-se-btn {
+    border: 2px solid rgb(132, 14, 201);
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#inscreva-se-btn:hover {
+    background-color: rgb(132, 14, 201);
+    color: white;
+}
+
+h1 {
+    font-weight: 200;
+}
+
+/* Estilo do main */
+main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+/* Seção hero */
+.hero {
+    flex: 1;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    border-radius: 15px;
+    margin-right: 20px; /* Espaço entre a seção e o aside */
+}
+
+.hero h2 {
+    font-size: 36px;
+    line-height: 1.5;
+}
+
+.hero span {
+    color: rgb(132, 14, 201);
+}
+
+.hero p {
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.cta-button {
+    background-color: rgb(132, 14, 201);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: rgba(132, 14, 201, 0.8);
+}
+
+/* Estilo do aside */
+aside {
+    width: 300px; /* Largura fixa */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+span {
+    color: rgb(132, 14, 201);
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Estilo do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+}
+
+form [type="submit"] {
+    background-color: rgb(132, 14, 201);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form [type="submit"]:hover {
+    background-color: rgba(132, 14, 201, 0.8);
+}
+
+/* Estilo do article */
+article {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Estilo do footer */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Muda para coluna em telas menores */
+    }
+
+    .hero {
+        margin-right: 0; /* Remove o espaço em dispositivos menores */
+    }
+}

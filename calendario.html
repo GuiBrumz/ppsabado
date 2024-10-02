@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario </title>
+    <link rel="stylesheet" href="calendario.css">
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="Site Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="./informativo.html">Informações</a></li>
+                    <li><a href="calendario.html">Agenda</a></li>
+                    <li><a href="login.html">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="calendario">
+            <div class="mês">
+                <i class="fas fa-angle-left prev"></i>
+                <div class="data">
+                    <h1 id="mesAno">Junho 2022</h1>
+                    <p id="dataCompleta">Quarta-Feira, 01 Junho, 2022</p>
+                </div>
+                <i class="fas fa-angle-right next"></i>
+            </div>
+            <div class="diasDaSemana">
+                <div>Domingo</div>
+                <div>Segunda</div>
+                <div>Terça</div>
+                <div>Quarta</div>
+                <div>Quinta</div>
+                <div>Sexta</div>
+                <div>Sábado</div>
+            </div>
+            <div class="dias"></div>
+        </div>
+        <!-- Formulário para adicionar tarefas -->
+        <div class="tarefa">
+            <h2>Adicionar Tarefa</h2>
+            <input type="text" id="descricaoTarefa" placeholder="Descrição da Tarefa">
+            <input type="date" id="dataTarefa">
+            <input type="time" id="horaTarefa">
+            <select id="nivelImportancia">
+                <option value="baixo">Baixo</option>
+                <option value="medio">Médio</option>
+                <option value="alto">Alto</option>
+            </select>
+            <button id="adicionarTarefa">Adicionar Tarefa</button>
+        </div>
+        <!-- Modal para exibir tarefas -->
+        <div id="modalTarefas" class="modal">
+            <div class="modal-conteudo">
+                <span class="fechar">&times;</span>
+                <h2>Tarefas do Dia <span id="diaSelecionado"></span></h2>
+                <ul id="listaTarefas"></ul>
+            </div>
+    </div>
+
+
+    <script src="calendario.js"></script>
+</body>
+</html>

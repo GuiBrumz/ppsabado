@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórum Criativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ícone de menu hamburger -->
+    <div class="menu-icon" id="menuIcon" onclick="toggleSidebar()">☰</div>
+
+    <!-- Barra lateral -->
+    <aside class="sidebar" id="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="informativo.html">ℹ️ Informações</a></li>
+                <li><a href="calendario.html">📅 Agenda</a></li>
+                <li><a href="login.html">🚪 Sair</a></li>
+                <li><a href="ajuda.html">❓ Ajuda</a></li> <!-- Opção de ajuda -->
+                <li><a href="configuracoes.html">⚙️ Configurações</a></li> <!-- Configurações na parte inferior -->
+            </ul>
+        </nav>
+    </aside>
+
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="Site Logo" class="logo">
+        </div>
+    </header>
+
+    <main>
+        <section class="content">
+            <h2>Faça sua Postagem!</h2>
+            <form id="messageForm" action="#">
+                <label for="title">Título da Postagem</label>
+                <input type="text" id="title" name="title" placeholder="Digite o título...">
+
+                <label for="description">Descrição</label>
+                <input type="text" id="description" name="description" placeholder="Digite a descrição...">
+
+                <button class="button button--confirm" id="handleSubmit" onclick="mostarCaixa()">Comentar</button>
+            </form>
+        </section>
+
+        <section id="messages">
+            <!-- Mensagens aparecerão aqui -->
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+/* Reset de CSS para melhor consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e6f0f3; /* Cor de fundo suave */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Ícone do menu (hamburger) */
+.menu-icon {
+    font-size: 24px; /* Tamanho menor do ícone */
+    padding: 15px; /* Reduzindo o espaçamento ao redor do ícone */
+    cursor: pointer;
+    background-color: #005f73;
+    color: white;
+    position: fixed;
+    top: 15px;
+    right: 15px; /* Alinhado à direita */
+    z-index: 1000;
+    transition: right 0.3s ease;
+}
+
+/* Sidebar oculta inicialmente (lado direito) */
+.sidebar {
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Organiza os itens na coluna */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    width: 250px;
+    background-color: #005f73;
+    position: fixed;
+    top: 0;
+    right: -250px; /* Fora da tela inicialmente */
+    height: 100vh;
+    padding: 20px 0; /* Adiciona espaço em cima e embaixo */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 999;
+}
+
+.sidebar nav {
+    flex-grow: 1; /* Permite que o nav cresça e ocupe o espaço disponível */
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Remove margens */
+}
+
+/* Estilo para os itens da lista */
+.sidebar nav ul li {
+    margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+    color: #edf6f9;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    padding: 15px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #94d2bd;
+    color: #333;
+    border-radius: 5px;
+}
+
+/* Estilo para o header */
+header {
+    width: 100%;
+    background-color: #005f73;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.logo {
+    height: 60px;
+}
+
+/* Estilo do formulário */
+/* Ajuste para o main para deixar o formulário mais próximo do header */
+main {
+    display: flex;
+    flex-direction: column; /* Empilha o conteúdo em coluna */
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    align-items: center;
+    width: 100%;
+    padding: 20px; /* Ajuste de espaçamento para deixar mais próximo ao header */
+    min-height: auto; /* Remove a altura mínima */
+    margin-top: 10px; /* Reduz a distância entre o formulário e o header */
+    background-color: transparent; /* Remove o fundo branco do contêiner principal */
+}
+
+section.content {
+    width: 100%;
+    max-width: 400px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Adiciona espaço abaixo do formulário para os comentários */
+}
+
+section.content h2 {
+    font-size: 28px;
+    color: #0077b6;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o título */
+}
+
+form {
+    width: 100%;
+}
+
+form label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005f73;
+}
+
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Seção de mensagens */
+/* Seção de mensagens */
+#messages {
+    width: 100%;
+    max-width: 400px; /* Mesma largura do formulário */
+    margin-top: 10px; /* Pequeno espaço entre o formulário e as mensagens */
+}
+
+/* Card para cada comentário */
+.message {
+    background-color: #edf6f9;
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas para o efeito de card */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Suave sombra para criar o efeito de card */
+    transition: transform 0.2s ease; /* Animação sutil ao passar o mouse */
+}
+
+.message:hover {
+    transform: translateY(-5px); /* Levanta o card levemente ao passar o mouse */
+}
+
+.message h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #000000; /* Cor do título do comentário */
+}
+
+.message p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilo para o botão de exclusão */
+.delete-button {
+    font-size: 14px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #d62828;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .menu-icon {
+        font-size: 24px;
+    }
+}
